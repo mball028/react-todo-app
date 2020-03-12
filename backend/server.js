@@ -23,6 +23,9 @@ mongoose.connect(
   }
 );
 
+const todoRouter = require("./routes/todo");
+app.use("/todos", todoRouter);
+
 app.get("/", (req, res) => res.send(`The express server is running smoothly.`));
 
 app.listen(port, () => console.log(`App listening on port: ${port}`));
