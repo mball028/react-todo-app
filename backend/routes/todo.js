@@ -11,15 +11,17 @@ router.get("/", (req, res) => {
 
 router.post("/addTodo", (req, res) => {
   const description = req.body.description;
+  const title = req.body.title;
 
   const newTodo = new Todo({
+    title,
     description
   });
 
   newTodo
     .save()
     .then(() => {
-      res.json(`${newTodo.description} added to Todo list.`);
+      res.json(`${newTodo.title} added to Todo list.`);
       console.log("New todo created successfully.");
     })
     .catch(err => {
@@ -37,6 +39,7 @@ router.get("/:id", (req, res) => {
 router.put("/edit/:id", (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
+      todo.title = req.body.title;
       todo.description = req.body.description;
 
       todo
