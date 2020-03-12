@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Todos from './components/todos.component'
 
 function App() {
   return (
-    <div className="App">
-      <p>My Todo App</p>
-    </div>
+    <Router>
+      <Route path='/' exact component={Todos} />
+    </Router>
   );
 }
 

@@ -36,7 +36,7 @@ router.get("/:id", (req, res) => {
     .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/editTodo/:id", (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
       todo.title = req.body.title;
