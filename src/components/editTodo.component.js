@@ -66,7 +66,7 @@ export default class EditTodo extends Component {
         <fieldset>
           <legend>Edit Todo</legend>
           <form onSubmit={this.submitEdit}>
-            <div>
+            <div className="input-box">
               <label>Title: </label>
               <input
                 type="text"
@@ -74,7 +74,7 @@ export default class EditTodo extends Component {
                 onChange={this.editTitle}
               />
             </div>
-            <div>
+            <div className="input-box">
               <label>Description: </label>
               <input
                 type="text"
@@ -82,7 +82,7 @@ export default class EditTodo extends Component {
                 onChange={this.editDescription}
               />
             </div>
-            <div>
+            <div className="input-box">
               <input type="submit" value="Submit Edit" />
             </div>
           </form>

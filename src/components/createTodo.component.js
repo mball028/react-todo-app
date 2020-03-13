@@ -41,11 +41,11 @@ export default class CreateTodo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="create-todo">
         <fieldset>
           <legend>Add a New Todo</legend>
           <form onSubmit={this.formSubmit}>
-            <div>
+            <div className="input-box">
               <label>Title: </label>
               <input
                 type="text"
@@ -54,7 +54,7 @@ export default class CreateTodo extends Component {
                 onChange={this.onTitleChange}
               />
             </div>
-            <div>
+            <div className="input-box">
               <label>Description: </label>
               <input
                 type="text"
@@ -63,7 +63,7 @@ export default class CreateTodo extends Component {
                 onChange={this.onDescriptionChange}
               />
             </div>
-            <div>
+            <div className="input-box">
               <input type="submit" value="Add Todo" />
             </div>
           </form>
