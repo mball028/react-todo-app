@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import Todo from "./todo.component";
+import CreateTodo from "./createTodo.component";
 
 export default class Todos extends Component {
   constructor(props) {
@@ -37,6 +38,12 @@ export default class Todos extends Component {
   }
 
   render() {
-    return <div>{this.todos()}</div>;
+    return (
+      <div>
+        <h1>TODOS</h1>
+        <CreateTodo />
+        {this.todos()}
+      </div>
+    );
   }
 }
